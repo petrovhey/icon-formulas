@@ -1,0 +1,8 @@
+/* UI guideline polish: focus, keyboard access, touch targets, and layout safety. */
+body{overflow-x:hidden}
+section[id]{scroll-margin-top:18px}
+a,button,summary{touch-action:manipulation}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #8fb1ff;outline-offset:3px}
+.skip-link{position:fixed;z-index:99;top:10px;left:10px;padding:10px 14px;background:#11181d;color:#fff;transform:translateY(-150%);transition:transform .2s ease}
+.skip-link:focus{transform:translateY(0)}
+h1,h2,h3{text-wrap:balance}

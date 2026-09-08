@@ -43,6 +43,18 @@ const productDetails = {
   magtein: {title: 'Magnesium L-Threonate', summary: '2,000 mg patented Magtein® with 144 mg elemental magnesium.', benefit: 'Supports brain health and memory, promotes cognitive function, and is built around a clinically studied magnesium form.', notes: ['90 capsules', 'Magtein® magnesium L-threonate', 'Use the current label for directions']}
 };
 
+const productPageSlugs = {zinc: 'zinc-bisglycinate', iron: 'iron-bisglycinate', k2: 'vitamin-k2-mk7', magnesium200: 'magnesium-bisglycinate-200', magnesium225: 'magnesium-bisglycinate-225', magtein: 'magnesium-l-threonate'};
+document.querySelectorAll('.product-card[data-product]').forEach((card) => {
+  const slug = productPageSlugs[card.dataset.product];
+  const amazonLink = card.querySelector('.product-card__link');
+  if (!slug || !amazonLink) return;
+  const detailsLink = document.createElement('a');
+  detailsLink.className = 'product-card__link product-card__link--detail';
+  detailsLink.href = `products/${slug}.html`;
+  detailsLink.textContent = 'Details ↗';
+  amazonLink.insertAdjacentElement('afterend', detailsLink);
+});
+
 const modal = document.querySelector('#product-detail-modal');
 const modalTitle = document.querySelector('#modal-title');
 const modalSummary = document.querySelector('#modal-summary');

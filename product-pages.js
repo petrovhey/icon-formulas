@@ -70,4 +70,26 @@ if (product) {
   document.querySelector('#ingredients').textContent = product.ingredients;
   document.querySelector('#product-warning').textContent = product.warning || '';
   document.querySelector('#mechanism-card')?.classList.toggle('is-visible', Boolean(product.mechanism));
+
+  // Put the buying argument in the same order a careful shopper evaluates it:
+  // benefit first, then the chosen form, then routine details and label proof.
+  const heroSection = document.querySelector('.product-hero');
+  const benefitSection = document.querySelector('#benefit-grid')?.closest('.product-page__section');
+  const formSection = document.querySelector('.form-story')?.closest('.product-page__section');
+  const essentialsSection = document.querySelector('#product-what')?.closest('.product-page__section');
+  if (heroSection && benefitSection && formSection && essentialsSection) {
+    heroSection.insertAdjacentElement('afterend', benefitSection);
+    benefitSection.insertAdjacentElement('afterend', formSection);
+    formSection.insertAdjacentElement('afterend', essentialsSection);
+  }
+
+  const benefitsKicker = benefitSection?.querySelector('.section-kicker');
+  const benefitsIntro = benefitSection?.querySelector('.product-page__section-head > p');
+  if (benefitsKicker) benefitsKicker.textContent = 'Start with the benefit';
+  if (benefitsIntro) benefitsIntro.textContent = 'A clear purpose comes first. Then we show the form, dose, and source behind that promise.';
+  const formKicker = formSection?.querySelector('.section-kicker');
+  if (formKicker) formKicker.textContent = 'Science & sourcing';
+
+  const qualityIntro = document.querySelector('.quality-panel--dark > p');
+  if (qualityIntro) qualityIntro.textContent = 'A premium formula should make its reasoning visible: the named source, the ingredient form, the active amount, and the manufacturing standard.';
 }

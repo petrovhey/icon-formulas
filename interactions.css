@@ -20,3 +20,33 @@ body.modal-open{overflow:hidden}
 .science-art__orb,.science-art__ring,.science-art__dot{display:none}
 .brand{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:150px;display:block}.brand__logo{display:block;width:100%;height:auto}.footer-brand__logo{display:block;width:150px;height:auto}.ingredient-section{padding-block:30px 135px}.ingredient-section__intro{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:end}.ingredient-section__intro p{max-width:430px;color:var(--muted);font-size:16px;line-height:1.6}.ingredient-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:48px}.ingredient-card{min-height:300px;display:flex;flex-direction:column;align-items:flex-start;padding:28px;background:#fff;color:var(--ink);transition:transform .48s cubic-bezier(.32,.72,0,1),box-shadow .48s cubic-bezier(.32,.72,0,1)}.ingredient-card:hover,.ingredient-card:focus-visible{transform:translateY(-9px);box-shadow:0 22px 42px rgba(17,24,29,.14)}.ingredient-card>span{font-size:10px;font-weight:700;letter-spacing:.15em}.ingredient-card strong{margin-top:55px;font:500 clamp(32px,4vw,48px)/.95 Newsreader,Georgia,serif}.ingredient-card p{max-width:280px;margin:18px 0 auto;color:var(--muted);font-size:13px;line-height:1.5}.ingredient-card b{margin-top:24px;font-size:11px}.ingredient-card--violet{background:#eee8f7}.ingredient-card--lavender{background:#eaeaf3}.ingredient-card--amber{background:#f4edda}.label-section{display:grid;grid-template-columns:auto .8fr 1.2fr;gap:50px;align-items:center;padding-block:34px 135px}.label-section__mark{color:var(--blue);font-size:11px;font-weight:700;letter-spacing:.14em;writing-mode:vertical-rl;transform:rotate(180deg)}.label-section h2{margin:0}.label-section__steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.label-section__steps div{display:flex;flex-direction:column;gap:12px;padding-top:14px;border-top:1px solid var(--line)}.label-section__steps strong{color:var(--blue);font-size:11px}.label-section__steps span{max-width:150px;color:var(--muted);font-size:13px;line-height:1.45}.product-card__body{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:16px}.product-card__body .product-card__type,.product-card__body h3,.product-card__body p{width:100%}.product-card__body .product-card__link{margin-top:4px}.product-card__link--detail{color:var(--blue);border-color:var(--blue)}
 @media(max-width:680px){.brand{width:132px}.ingredient-section{padding-block:10px 90px}.ingredient-section__intro{grid-template-columns:1fr;gap:18px}.ingredient-grid{grid-template-columns:1fr;margin-top:34px}.ingredient-card{min-height:260px}.label-section{grid-template-columns:1fr;gap:20px;padding-block:0 90px}.label-section__mark{writing-mode:initial;transform:none}.label-section__steps{grid-template-columns:1fr;gap:14px}.label-section__steps div{display:grid;grid-template-columns:34px 1fr;gap:10px}.label-section__steps span{max-width:none}.product-card__body .product-card__link{margin-top:0}.footer-brand__logo{width:142px}}
+
+/* Benefit-led discovery and an evidence path for the homepage. */
+.formula-finder{padding-block:24px 135px}
+.formula-finder__heading,.provenance-section__intro{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end}
+.formula-finder__heading h2,.provenance-section__intro h2{margin:0}
+.formula-finder__heading p,.provenance-section__intro>p{max-width:440px;margin:0;color:var(--muted);font-size:16px;line-height:1.6}
+.formula-finder__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:52px}
+.formula-finder__grid button{min-height:260px;padding:24px;text-align:left;display:flex;flex-direction:column;align-items:flex-start;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;transition:transform .45s cubic-bezier(.32,.72,0,1),box-shadow .45s cubic-bezier(.32,.72,0,1),background .25s ease,color .25s ease}
+.formula-finder__grid button:hover,.formula-finder__grid button:focus-visible{transform:translateY(-9px);background:var(--ink);color:#fff;box-shadow:0 22px 42px rgba(17,24,29,.14);outline:none}
+.formula-finder__grid button:nth-child(2):hover,.formula-finder__grid button:nth-child(2):focus-visible{background:var(--blue)}
+.formula-finder__grid button:nth-child(3):hover,.formula-finder__grid button:nth-child(3):focus-visible{background:var(--violet)}
+.formula-finder__grid button:nth-child(4):hover,.formula-finder__grid button:nth-child(4):focus-visible{background:var(--amber)}
+.formula-finder__grid button>span{color:var(--blue);font-size:10px;font-weight:700;letter-spacing:.14em}
+.formula-finder__grid button:hover>span,.formula-finder__grid button:focus-visible>span{color:#fff}
+.formula-finder__grid strong{margin-top:54px;font-size:20px;letter-spacing:-.04em}
+.formula-finder__grid small{max-width:190px;margin-top:10px;color:var(--muted);font-size:12px;line-height:1.45}
+.formula-finder__grid button:hover small,.formula-finder__grid button:focus-visible small{color:rgba(255,255,255,.72)}
+.formula-finder__grid b{margin-top:auto;padding-top:22px;font-size:10px}
+.provenance-section{padding-block:0 135px}
+.provenance-section__intro{padding-block:0 48px}
+.provenance-section__steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)}
+.provenance-section__steps article{min-height:218px;padding:23px;background:var(--paper)}
+.provenance-section__steps span{color:var(--blue);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.provenance-section__steps strong{display:block;margin-top:44px;font-size:18px;letter-spacing:-.04em}
+.provenance-section__steps p{margin:12px 0 0;color:var(--muted);font-size:12px;line-height:1.5}
+.product-page__section:has(#benefit-grid){background:#ebece8}
+.product-page__section:has(#benefit-grid) .benefit-card{background:var(--paper)}
+.product-page__section:has(.form-story){border-top:1px solid var(--line)}
+@media(max-width:900px){.formula-finder__grid{grid-template-columns:repeat(2,1fr)}.provenance-section__steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:680px){.formula-finder{padding-block:0 90px}.formula-finder__heading,.provenance-section__intro{grid-template-columns:1fr;gap:18px}.formula-finder__grid{grid-template-columns:1fr;margin-top:34px}.formula-finder__grid button{min-height:220px}.formula-finder__grid strong{margin-top:34px}.provenance-section{padding-bottom:90px}.provenance-section__intro{padding-bottom:34px}.provenance-section__steps{grid-template-columns:1fr}.provenance-section__steps article{min-height:180px}.provenance-section__steps strong{margin-top:30px}}

@@ -83,6 +83,11 @@ if (product) {
     formSection.insertAdjacentElement('afterend', essentialsSection);
   }
 
+  const routineSection = document.createElement('section');
+  routineSection.className = 'product-lifestyle section-shell';
+  routineSection.innerHTML = '<div class="product-lifestyle__image"><img src="../assets/routine-lifestyle.png" alt="Woman enjoying a quiet evening wellness routine with water and a book" loading="lazy"></div><div class="product-lifestyle__copy"><div class="section-kicker">Built for the day you actually have</div><h2>A routine<br>you can <em>keep.</em></h2><p>One clear purpose. One considered form. No unnecessary noise.</p></div>';
+  formSection?.insertAdjacentElement('afterend', routineSection);
+
   const benefitsKicker = benefitSection?.querySelector('.section-kicker');
   const benefitsIntro = benefitSection?.querySelector('.product-page__section-head > p');
   if (benefitsKicker) benefitsKicker.textContent = 'Start with the benefit';

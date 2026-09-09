@@ -50,3 +50,33 @@ body.modal-open{overflow:hidden}
 .product-page__section:has(.form-story){border-top:1px solid var(--line)}
 @media(max-width:900px){.formula-finder__grid{grid-template-columns:repeat(2,1fr)}.provenance-section__steps{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:680px){.formula-finder{padding-block:0 90px}.formula-finder__heading,.provenance-section__intro{grid-template-columns:1fr;gap:18px}.formula-finder__grid{grid-template-columns:1fr;margin-top:34px}.formula-finder__grid button{min-height:220px}.formula-finder__grid strong{margin-top:34px}.provenance-section{padding-bottom:90px}.provenance-section__intro{padding-bottom:34px}.provenance-section__steps{grid-template-columns:1fr}.provenance-section__steps article{min-height:180px}.provenance-section__steps strong{margin-top:30px}}
+
+/* Lifestyle layer: let the product live in a human routine, not only in a grid. */
+@media(min-width:681px){
+  .site-header{display:block;min-height:90px}
+  .site-header .site-nav{position:absolute;inset:0;display:flex;align-items:center;gap:24px;padding:0}
+  .site-header .site-nav a:nth-child(3){margin-left:auto}
+  .site-header .site-nav .nav-cta{white-space:nowrap}
+}
+.hero__visual:after{background:linear-gradient(0deg,rgba(17,24,29,.28),transparent 32%)}
+.lifestyle-feature,.product-lifestyle{display:grid;grid-template-columns:1.15fr .85fr;gap:80px;align-items:center}
+.lifestyle-feature{padding-block:0 135px}
+.lifestyle-feature__image,.product-lifestyle__image{position:relative;overflow:hidden;background:#e7e0d8}
+.lifestyle-feature__image{aspect-ratio:1.35/1}
+.lifestyle-feature__image:before,.product-lifestyle__image:before{content:"";position:absolute;inset:18px;border:1px solid rgba(255,255,255,.5);z-index:1;pointer-events:none}
+.lifestyle-feature__image img,.product-lifestyle__image img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.32,.72,0,1)}
+.lifestyle-feature:hover img,.product-lifestyle:hover img{transform:scale(1.035)}
+.lifestyle-feature__copy h2,.product-lifestyle__copy h2{margin-bottom:24px}
+.lifestyle-feature__copy p,.product-lifestyle__copy p{max-width:300px;color:var(--muted);font-size:16px;line-height:1.6}
+.label-section{position:relative;color:#fff;background:linear-gradient(90deg,rgba(17,24,29,.86),rgba(17,24,29,.34)),url('assets/routine-lifestyle.png') center/cover no-repeat;padding:78px 52px;margin-bottom:135px}
+.label-section__mark{color:#b9caff}
+.label-section .section-kicker{color:#b9caff}
+.label-section h2{color:#fff}
+.label-section__steps div{border-color:rgba(255,255,255,.32)}
+.label-section__steps span{color:rgba(255,255,255,.8)}
+.product-lifestyle{padding-block:0 105px}
+.product-lifestyle__image{aspect-ratio:1.35/1}
+.product-lifestyle__copy{padding-right:30px}
+.science-art{background-image:url('assets/formulation-science-powder.png')}
+@media(max-width:900px){.lifestyle-feature,.product-lifestyle{gap:45px}.label-section{padding-inline:32px}}
+@media(max-width:680px){.lifestyle-feature,.product-lifestyle{grid-template-columns:1fr;gap:34px}.lifestyle-feature{padding-bottom:90px}.lifestyle-feature__image,.product-lifestyle__image{aspect-ratio:1.1/1}.label-section{margin-bottom:90px;padding:58px 24px;background-position:58% center}.label-section__steps span{color:rgba(255,255,255,.82)}.product-lifestyle{padding-bottom:78px}.product-lifestyle__copy{padding-right:0}}

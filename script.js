@@ -59,8 +59,12 @@ if (homeMain && homeProductSection) {
 
   const heroTitle = document.querySelector('.hero h1');
   const heroLead = document.querySelector('.hero__lead');
+  const heroImage = document.querySelector('.hero__visual img');
   if (heroTitle) heroTitle.innerHTML = 'Support that<br>fits your <em>routine.</em>';
   if (heroLead) heroLead.textContent = 'Focused vitamins and minerals, chosen for a clear purpose — with a named form, a meaningful dose, and a label you can read.';
+  if (heroImage) { heroImage.src = 'assets/icon-formulas-hero-lifestyle.png'; heroImage.alt = 'Woman reaching for a glass of water beside an Icon Formulas Magtein bottle in a sunlit kitchen'; }
+  const heroCaption = document.querySelector('.hero__visual-caption');
+  if (heroCaption) heroCaption.innerHTML = '<span>THE ICON ROUTINE</span><strong>Made for real life.</strong>';
 
   const proofItems = document.querySelectorAll('.proof-strip__item');
   const proofCopy = [
@@ -80,6 +84,12 @@ if (homeMain && homeProductSection) {
   finder.id = 'finder';
   finder.innerHTML = '<div class="section-kicker">Start with your goal</div><div class="formula-finder__heading"><h2>Find the formula<br>that fits <em>you.</em></h2><p>Choose the support you are shopping for. We will show you the formulas built around that purpose, then let you inspect the form and dose.</p></div><div class="formula-finder__grid"><button type="button" data-goal="foundation"><span>01</span><strong>Daily foundation</strong><small>Essential mineral support for everyday consistency.</small><b>See foundational formulas ↘</b></button><button type="button" data-goal="energy"><span>02</span><strong>Energy &amp; recovery</strong><small>Iron and magnesium for the demands of the day.</small><b>See energy formulas ↘</b></button><button type="button" data-goal="brain"><span>03</span><strong>Brain &amp; focus</strong><small>A focused magnesium form for cognitive support.</small><b>See brain formula ↘</b></button><button type="button" data-goal="bones"><span>04</span><strong>Bones &amp; balance</strong><small>Forms selected for calcium and bone support.</small><b>See balance formula ↘</b></button></div></section>';
   homeProductSection.insertAdjacentElement('beforebegin', finder);
+
+  const proofStrip = document.querySelector('.proof-strip');
+  const lifestyle = document.createElement('section');
+  lifestyle.className = 'lifestyle-feature section-shell';
+  lifestyle.innerHTML = '<div class="lifestyle-feature__image"><img src="assets/zinc-bisglycinate-lifestyle.png" alt="Icon Formulas Zinc Bisglycinate bottle on a desk beside a glass of water" loading="lazy"></div><div class="lifestyle-feature__copy"><div class="section-kicker">A formula in the real world</div><h2>Good habits need<br><em>a place to live.</em></h2><p>Clear enough for the label. Simple enough for the day.</p><a class="text-link" href="#products">Shop the collection <span aria-hidden="true">↘</span></a></div>';
+  proofStrip?.insertAdjacentElement('afterend', lifestyle);
 
   const provenance = document.createElement('section');
   provenance.className = 'provenance-section section-shell';
